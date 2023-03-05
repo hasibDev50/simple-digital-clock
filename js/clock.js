@@ -5,6 +5,13 @@ const displayTime = () => {
   let sec = dateTime.getSeconds();
   let session = document.getElementById("session");
 
+  if (hrs > 12) {
+    session.innerHTML = "PM";
+    hrs = hrs - 12;
+  } else {
+    session.innerHTML = "AM";
+  }
+
   document.getElementById("hours").innerHTML = hrs;
   document.getElementById("minutes").innerHTML = min;
   document.getElementById("seconds").innerHTML = sec;
